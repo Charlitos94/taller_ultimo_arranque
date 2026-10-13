@@ -1,20 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package taller_ultimo_arranque;
 
-/**
- *
- * @author Jose C Diaz
- */
+import java.sql.Connection;
+
 public class Taller_ultimo_arranque {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        
+        Connection cn = ConexionBD.obtenerConexion();
+        
+        if (cn != null) {
+            System.out.println("¡Conexión verificada exitosamente!");
+        } else {
+            System.out.println("Error: No se pudo conectar a la base de datos.");
+        }    }
     
 }
